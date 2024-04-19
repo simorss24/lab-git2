@@ -1,9 +1,7 @@
 name: Basic workflow
 
 on:
-  push:
-    branches: 
-      - main
+  push
 
 jobs:
   basic-job:
