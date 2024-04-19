@@ -1,0 +1,19 @@
+name: Test C++ compilation
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repo
+        uses: actions/checkout@v4
+
+      - name: Install g++
+        run: apt install gcc
+
+      - name: Compile the file
+        run: g++ file.cpp
