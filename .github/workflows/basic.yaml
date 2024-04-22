@@ -5,7 +5,10 @@ on:
 
 jobs:
   basic-job:
-    runs-on: [macos-latest, ubuntu-latest]
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Test linux
         if: ${{ runner.os }} == Linux
