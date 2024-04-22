@@ -5,10 +5,12 @@ on:
 
 jobs:
   basic-job:
-    runs-on: macos-latest
+    runs-on: [macos-latest, ubuntu-latest]
     steps:
-      - name: Hello World
-        run: 'echo "Hello world"'
+      - name: Test linux
+        if: ${{ runner.os }} == Linux
+        run: 'echo "Siamo su Linux!!"'
 
-      - name: Hello World
-        run: 'echo ${{ runner.os }}'
+      - name: Test mac
+        if: ${{ runner.os }} == macOS
+        run: 'echo "Siamo su mac!!"'
