@@ -10,6 +10,9 @@ jobs:
         os: [macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Runner
+        run: 'echo ${{ runner.os }}'
+
       - name: Test linux
         if: ${{ runner.os }} == Linux
         run: 'echo "Siamo su Linux!!"'
