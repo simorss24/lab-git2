@@ -14,9 +14,9 @@ jobs:
         run: 'echo ${{ runner.os }}'
 
       - name: Test linux
-        if: runner.os == Linux
+        if: runner.os == "Linux"
         run: 'echo "Siamo su Linux!!"'
 
       - name: Test mac
-        if: runner.os == macOS
+        if: runner.os == "macOS"
         run: 'echo "Siamo su mac!!"'
