@@ -5,7 +5,7 @@ on:
 
 jobs: 
   basic-job: 
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Hello World
         uses: actions/checkout@v4
