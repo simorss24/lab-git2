@@ -5,10 +5,10 @@ on:
     basic-job: 
       run.on: ubuntu-latest
       steps:
-        -name Hello World
+        -name: Hello World
          uses: actions/checkout@v4
 
-        -name Install g++
+        -name: Install g++
          run: sudo apt install gcc
 
         -name: Compile file.cpp
