@@ -1,0 +1,15 @@
+name: Basic Workflow 
+
+on:
+  push:
+    basic-job: 
+      run.on: ubuntu-latest
+      steps:
+        -name Hello World
+         uses: actions/checkout@v4
+
+        -name Install g++
+         run: sudo apt install gcc
+
+        -name: Compile file.cpp
+         run: g++ file.cpp
